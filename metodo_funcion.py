@@ -1,16 +1,28 @@
-def opciones():
-    print("Seleccione una opcion")
-    print("1-Opcion 1")
-    print("2-Opcion 2")
-    print("3-Opcion 3")
+def opciones(nombre,apodo):
+    print(f"Bienvenido {nombre} ({apodo}), Seleccione una opcion")
+    print("1-SUMAR")
+    print("2-RESTAR")
+    print("3-MULTIPLICAR")
     print("4-SALIR")
-def accion(OP=0):
+def sumar(n1,n2):
+    return n1+n2
+def restar(n1,n2):
+    return n1-n2
+def multiplicar(n1,n2):
+    return n1*n2
+def accion(OP=0): 
     if OP==1:
-        print("Ingreso a la opcion 1")
+        n1=int(input("Ingrese el primer numero: "))
+        n2=int(input("Ingrese el segundo numero: "))
+        print(sumar(n1,n2))
     elif OP==2:
-        print("Ingreso a la opcion 2")
+        n1=int(input("Ingrese el primer numero: "))
+        n2=int(input("Ingrese el segundo numero: "))
+        print(restar(n1,n2))
     elif OP==3:
-        print("Ingreso a la opcion 3")
+        n1=int(input("Ingrese el primer numero: "))
+        n2=int(input("Ingrese el segundo numero: "))
+        print(multiplicar(n1,n2))
     elif OP==4:
         print("Salioo")
     else:
@@ -18,7 +30,7 @@ def accion(OP=0):
 
 validacion=True
 while validacion==True:
-    opciones()
+    opciones("GONZALO","ZALO")
     try:
         op=int(input("Ingrese una opcion: "))
         print(type(op))
